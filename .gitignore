@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+
+
+# Ignore all files in a specific folder
+/Results/
