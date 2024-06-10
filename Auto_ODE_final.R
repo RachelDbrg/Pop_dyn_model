@@ -19,7 +19,7 @@ library(dplyr)
 library(purrr)
 
 # Load working directory
-setwd("~/Automation_Primary_productivity/scripts/Auto_PP_scenarios_beaver")
+setwd("~/Pop_dyn_model_Rachel/Auto_PP_scenarios_beaver")
 # setwd("C:/Users/radub33/Documents/Copie_locale_17_mai")
 
 
@@ -172,7 +172,7 @@ for (i in 1:nrow(input_parameters)) {
   
   
   # filename <- paste0("~/Copie_locale_17_mai/Results/test/", name_iteration, ".R")
-  filename <- paste0("~/Automation_Primary_productivity/scripts/Auto_PP_scenarios_beaver/Results/test/", name_iteration, "compar.R")
+  filename <- paste0("~/Pop_dyn_model_Rachel/Auto_PP_scenarios_beaver/Results/simulations/", name_iteration, ".R")
   print(filename)
   # filename <- paste0("~/Automation_Primary_productivity/scripts/Auto_PP_scenarios/Results/test/", name_iteration, "eumaugmente.R")
   # saveRDS(res, file = "~/Automation_Primary_productivity/scripts/One_more_prey_decrease_lichen_PP/Results/MCP.R")

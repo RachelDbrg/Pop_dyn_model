@@ -24,7 +24,7 @@ generate_parameter_dataframe <- function() {
     kUpeak  <-  (1 + PP/2)*kUpeak_0
     
     # Stable deciduous carrying capacity
-    kUstable <- (1+(PP/2))* kUstable_0 * 2.4
+    kUstable <- (1+(PP/2))* kUstable_0 
     
     
     # Stable lichen carrying capacity
@@ -41,15 +41,20 @@ generate_parameter_dataframe <- function() {
     ### Animals
     
     # Conversion rate of energy into newborns
-    # Deer
-    #0.25*(0.05*e_UC*240000/(1+0.05*h_UC*240000) - mu_C)^-1
-    chi_C = 2.669839e-09
+    # ind/kJ
     
     # Moose
-    chi_M = chi_C * epsi_MC 
+    # chi_M = chi_C * epsi_MC 
+    chi_M = 1.613868e-09
+    
+    
+    # Deer
+    #0.25*(0.05*e_UC*240000/(1+0.05*h_UC*240000) - mu_C)^-1
+    chi_C = chi_M * epsi_CM
     
     # Caribou
-    chi_N = 2.669839e-09 * 0.7
+    epsi_NM = w_Ma/w_Na
+    chi_N = chi_M * epsi_NM
     
     
     
